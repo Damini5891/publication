@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import services from "../../public/images/website/services.svg";
-import FlipCard from "../components/FlipCard";
+import FlipCard from "../components/ServiceSection";
+import ServicesSection from "../components/ServiceSection";
 
 const servicesPage = () => {
   return (
@@ -33,7 +34,7 @@ const servicesPage = () => {
         </div>
       </div>
 
-      <FlipCard />
+      <ServicesSection />
     </section>
   );
 };
