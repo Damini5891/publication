@@ -10,6 +10,8 @@ import EbookSection from "@/components/EbookSection";
 import BusinessStats from "@/components/BusinessStats";
 import Network from "@/components/Network";
 import FAQ from "@/components/FAQ";
+import background from "../../public/images/website/background.jpg";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +25,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className="text-gray-600 body-font mx-4 md:mx-8 lg:mx-32 mt-24">
+        <section className="text-gray-600 body-font mx-4 md:mx-8 lg:mx-32 mt-24"
+         style={{
+                  backgroundImage: `url(${background.src})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                }}>
           <div className="container mx-auto flex px-5 md:flex-row flex-col items-center">
             <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">

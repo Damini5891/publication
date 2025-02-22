@@ -12,19 +12,26 @@ import book4 from "../../public/images/books/book4.jpg";
 import book5 from "../../public/images/books/book5.png";
 import book6 from "../../public/images/books/book6.webp";
 import ebook from "../../public/images/website/ebook.png";
+import background from "../../public/images/website/background.jpg";
+import sunny from "../../public/images/sunny/sunny.jpg";
+import omtatsat from "../../public/images/sunny/om_tatsat.jpg";
+import alakh from "../../public/images/sunny/alakh.jpg";
+import khalish from "../../public/images/sunny/khalish.png";
+
+
 
 const featuredAuthorData = {
   name: "Dr. Sarojini 'Tanhaa'",
-  image: book1,
+  image: sunny,
   designation: "Professor Physical Education",
   qualification: "PhD-Physical Education (BHU Varanasi), M.PED (BHU), MA (BHU)",
   description: `
 
 Dr. Sarojini Tanhaa is a renowned poet and writer celebrated for her evocative works that explore themes of solitude, resilience, and human emotions. Her literary contributions have inspired many, blending poignant reflections with a profound understanding of life's complexities.`,
   books: [
-    { title: "Title One", image: book1 },
-    { title: "Titlw Two", image: book2 },
-    { title: "Title Three", image: book1 },
+    { title: "Om Tat Sat", image: omtatsat },
+    { title: "Alakh", image: alakh },
+    { title: "Khalish", image: khalish },
   ],
 };
 
@@ -52,7 +59,16 @@ const Section = ({ title, children }) => (
 const Store = () => {
   return (
     <div className="p-4 bg-gray-100 min-h-screen">
-      <div className="text-center  py-10 px-6 rounded-md shadow-md mb-10">
+      <div
+        className="text-center py-10 px-6 rounded-md shadow-md mb-10"
+        style={{
+          backgroundImage: `url(${background.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+        
+      >
         <div className="flex justify-center mb-4">
           <Image
             className="lg:w-2/6 md:w-3/6 w-1/4 object-cover object-center"
@@ -75,14 +91,15 @@ const Store = () => {
             EXPLORE ALL BOOKS
           </button>
         </div>
-     
-      
+      </div>
+
+
 
       <FeaturedAuthor data={featuredAuthorData} />
       <BookGenres genres={bookGenres} />
       <BookSection />
       <RecentlyPublishedBooks />
-      </div>
+   
     </div>
   );
 };
